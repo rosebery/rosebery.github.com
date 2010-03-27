@@ -1,0 +1,37 @@
+---
+layout: default
+top: Rosebery
+feed: atom.xml
+---
+
+<div id="header">
+	{% include nav.html %}
+</div>
+
+<div id="page">
+	
+  <h1 class="emphnext">{{ page.title }}</h1>
+
+{{ content }}
+
+  <address class="signature">
+    <a class="author" href="/">Jennifer Lee</a> 
+    <span class="date">{{ page.date | date_to_long_string }}</span>
+    <span class="location">{{ page.location }}</span>
+  </address>
+</div><!-- End Page -->
+
+<!-- Discus Comments -->
+<div id="disqus_thread"></div>
+
+<!-- Enable Disqus comments -->
+<script type="text/javascript">
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://rosebery.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=rosebery">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
